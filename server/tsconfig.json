@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "outDir": "dist",
+        "sourceMap": true,
+        "removeComments": true,
+        "strict": true,
+        "strictNullChecks": false,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noImplicitReturns": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "declaration": false,
+        "importHelpers": true,
+        "useDefineForClassFields": false
+    },
+    "watchOptions": {
+        "watchFile": "dynamicPriorityPolling",
+        "watchDirectory": "dynamicPriorityPolling"
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "log",
+        "src/**/*.spec.ts"
+    ]
+}
