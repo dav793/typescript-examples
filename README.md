@@ -43,3 +43,10 @@ docker run --name typescript-examples-container -v $(pwd):/projects -it --rm typ
 Then, install the dependencies and run as shown above. 
 
 Alternatively, running the Node server may not be necessary as the typescript compiler works directly in many IDEs.
+
+## Extras
+
+Reference these resources:
+* [Typescript: Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+* [Typescript: Cheatsheets](https://www.typescriptlang.org/cheatsheets)
+* [Matt Pocock's YouTube channel](https://www.youtube.com/@mattpocockuk)
