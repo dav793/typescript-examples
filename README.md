@@ -28,7 +28,7 @@ docker build -f Dockerfile -t typescript-examples-image .
 
 ### Run container
 
-**Windows:**
+**Windows CMD:**
 ```cmd
 docker run --name typescript-examples-container -v %cd%:/projects -it --rm typescript-examples-image /bin/sh
 ```
