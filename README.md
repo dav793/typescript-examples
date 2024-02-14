@@ -1,8 +1,10 @@
 # Typescript examples
 
-Tiny sandbox made to test various Typescript use-cases in a NodeJS environment and use as reference.
+Tiny sandbox made to test various Typescript use-cases in a NodeJS environment.
 
-Uses:
+The examples are located in `server/src/examples`.
+
+This project uses:
 * NodeJS 20.11.0
 * Typescript 5.3.3
 
@@ -37,3 +39,7 @@ docker run --name typescript-examples-container -v %cd%:/projects -it --rm types
 ```bash
 docker run --name typescript-examples-container -v $(pwd):/projects -it --rm typescript-examples-image /bin/sh
 ```
+
+Then, install the dependencies and run as shown above. 
+
+Alternatively, running the Node server may not be necessary as the typescript compiler works directly in many IDEs.
