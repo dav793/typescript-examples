@@ -1,6 +1,11 @@
 
-// This is a conditional type:
+// These are conditional types:
+
 type Result = true extends boolean ? 1 : 0;     // Result type is 1
+
+type Result2<T> = T extends 'hello' ? boolean : never;
+let test1: Result2<'hello'>;        // test1 type is boolean
+let test2: Result2<'goodbye'>;      // test2 type is never
 
 // Within conditional types, you can use the keyword 'infer' to get whatever is being matched in the condition.
 // Here are some examples:
@@ -20,8 +25,8 @@ type FakeReturnType<T> = T extends (
     ? R             // ...result will be the type returned by the function T
     : never;        // ...otherwise result will be type never
 
-type Result2 = FakeReturnType<typeof func>;     // here type is 'string'
-type Result3 = FakeReturnType<typeof obj>;      // here type is 'never'
+type Result3 = FakeReturnType<typeof func>;     // here type is string
+type Result4 = FakeReturnType<typeof obj>;      // here type is never
 
 
 
@@ -36,7 +41,7 @@ type FakeReturnType2<T> = T extends ((
     ? `${R}_return_type`                // ...then we can use the static return type for operations
     : never;
 
-type Result4 = FakeReturnType2<typeof func2>;   // here type is 'world_return_type'
+type Result5 = FakeReturnType2<typeof func2>;   // here type is 'world_return_type'
 
 
 
@@ -51,7 +56,7 @@ type GetFromDeepObject<T> = T extends {     // we can use 'infer' to get the typ
     ? C                                     // ...we can then use a conditional type to return the type of that property
     : never;
 
-type C = GetFromDeepObject<{        // here type 'C' is resolved as 'number'
+type C = GetFromDeepObject<{        // here type 'C' is resolved as number
     a: {
         b: {
             c: number
