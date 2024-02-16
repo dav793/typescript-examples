@@ -71,6 +71,9 @@ const generatePriceTable = (category: CategoryKey) => {
         .forEach((itemKey) => {
 
             const itemValue = (itemCategoryMap as any)[itemKey];        // how can you avoid using type any here??
+            // it seems like it might be unavoidable: 
+            // https://stackoverflow.com/questions/72620953/type-foot-is-not-assignable-to-type-t-extends-string-string-foot-fo
+            
             priceTable[itemKey as AnyItemKey] = lookupPrice(itemValue);
         });
 }
